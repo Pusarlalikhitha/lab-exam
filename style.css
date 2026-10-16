@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+  color: #222;
+}
+
+header {
+  background: #172554;
+  color: white;
+  padding: 18px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0;
+}
+
+input {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  min-width: 180px;
+}
+
+button, .hero a {
+  padding: 11px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button:hover, .hero a:hover {
+  background: #1d4ed8;
+}
+
+.hero {
+  padding: 65px 20px;
+  text-align: center;
+  background: #dbeafe;
+}
+
+.hero h2 {
+  font-size: 36px;
+}
+
+main {
+  padding: 30px 5%;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 22px;
+}
+
+.product {
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 3px 12px #00000010;
+}
+
+.product img {
+  width: 100%;
+  height: 170px;
+  object-fit: contain;
+}
+
+.product h3 {
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #166534;
+}
+
+.cart {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: min(400px, 100%);
+  overflow-y: auto;
+  background: white;
+  padding: 25px;
+  box-shadow: -5px 0 20px #0002;
+  z-index: 10;
+}
+
+.hidden {
+  display: none;
+}
+
+.close {
+  float: right;
+  background: #dc2626;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #ddd;
+  padding: 14px 0;
+}
+
+.cart-item button {
+  padding: 7px 10px;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  background: #172554;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  header {
+    justify-content: center;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+}
